@@ -22,7 +22,7 @@ def tous_les_tableau(nombre_iteration,N,L):
     tab_total = np.zeros((nombre_iteration,N,3,4,3))
     tab_total[0,:,:,:,:] = initialisation_moi.tableau_tot(N, L)
     for i in range(1,nombre_iteration):
-        tab_total[i] = integration.nouveau_tableau(tab_total[i-1])
+        tab_total[i,:,:,:,:] = integration.nouveau_tableau(tab_total[i-1,:,:,:,:])
     return tab_total
 
 '''programme principale'''
