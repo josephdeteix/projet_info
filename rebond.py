@@ -11,7 +11,7 @@ Created on Wed Apr 27 15:42:55 2022
 import numpy as np
 
 N = 10
-L = 1*(10**(-7))
+L = 1*(10**(-9))
 
 '''les fonctions'''
 
