@@ -14,7 +14,7 @@ import initialisation_moi
 
 nombre_iteration = 1000
 N = 10
-L = 1*(10**(-7))
+L = 1*(10**(-9))
 
 '''les fonctions'''
 
