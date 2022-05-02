@@ -16,7 +16,7 @@ import rebond
 import initialisation_moi
 
 N = 10
-L = 1*(10**(-7))
+L = 1*(10**(-9))
 dt = 1e-11#pas du temps d'integrations
 d_AG = 2.57*10**(-11) # 0,1 microm par ex pour une boîte carrée
 d_AB = 3.85*10**(-11) # distance pôle - (A) à pôle + (B)
