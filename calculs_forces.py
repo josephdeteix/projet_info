@@ -21,7 +21,7 @@ from math import sin
 import initialisation_moi
 
 N = 10
-L = 1*(10**(-7))
+L = 1*(10**(-9))
 epsilon_0 = 	8.85418782*(10**(-3))
 '''charge fictive plus'''
 cp= 8.78*(10**(-21))
