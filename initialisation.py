@@ -14,7 +14,7 @@ from math import sin
 from math import pi
 
 N = 10
-L = 1*(10**(-7))
+L = 1*(10**(-9))
 Kb = 1.38*(10**(-23)) # en J.K-1
 T = 293 # K
 vmax = 500 # pas trop d'idée ordre de grandeur : à vérifier
@@ -71,6 +71,13 @@ def vitesse(N):
     mean = 500/2                # vmax = 500 m/s
     res = np.random.normal(mean, sigma, size = (N,3,1,3))
     return res
+
+
+def vitesse_euler(N):
+    vitesse_min = 40*pi
+    vitesse_max = 80*pi
+    tab_vitesse = np.random.uniform(vitesse_min,vitesse_max,size = (N,2,3))
+    return tab_vitesse
     
 def tableau_tot(N,L):
     '''renvoie le tableau 10*3*4*3 de l'initialisation'''
@@ -80,6 +87,7 @@ def tableau_tot(N,L):
     tab_tot[:,:,0,:] = positions_cart[:,:,0,:]
     tab_tot[:,:,1,:] = vitesse_cart[:,:,0,:]
     tab_tot[:,:,2::1,:] = angles_euler
+    tab_tot[:,0:2:1,3,:] = vitesse_euler(N)
     return tab_tot
     
 '''programme principale'''
